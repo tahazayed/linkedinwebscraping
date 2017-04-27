@@ -2,12 +2,12 @@
 // @name        saveLinkedIn.user.js
 // @namespace   https://taha-amin/
 // @description save search result for Marketing us
-// @match    https://www.linkedin.com/search/results/index/?keywords=Marketing%20us*
+// @match    https://www.linkedin.com/search/results/people/?origin=GLOBAL_SEARCH_HEADER&keywords=Marketing%20us*
 // @version     1.0.0
 // @grant       none
 // ==/UserScript==
 
-var baseUrl = 'https://www.linkedin.com/search/results/index/?keywords=Marketing%20us';
+var baseUrl = 'https://www.linkedin.com/search/results/people/?origin=GLOBAL_SEARCH_HEADER&keywords=Marketing%20us';
 
 function wait(ms) {
 	var start = new Date().getTime();
@@ -80,7 +80,7 @@ function Add_User() {
 	}
 	if (users.length > 0) {
 		fileName = window.location.href.replace(baseUrl, '').replace('&page=', '');
-		fileName = 'results' + fileName + '.txt';
+		fileName = 'results' + fileName + '.json';
 		download(users, fileName, 'text/plain');
 		// clearInterval(myVar);
 		// console.log("-> close");
