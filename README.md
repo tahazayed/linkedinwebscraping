@@ -17,3 +17,7 @@ Linkedin web scraping people from search result
 7-the script will download file for each page
 
 8-allow multiple file download for the site.
+
+9-copy all results*.json to results folder
+
+10-run python MergemyResults.py to merge all in finalFile.json
