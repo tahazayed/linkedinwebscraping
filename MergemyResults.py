@@ -1,7 +1,9 @@
 import glob
+import json
+
 glob_data = []
-for file in glob.glob('results*.json'):
-    with open(file) as json_file:
+for file in glob.glob('results/results*.json'):
+    with open(file,encoding='utf-8') as json_file:
         data = json.load(json_file)
 
         i = 0
